@@ -6,7 +6,6 @@ interface IUseScrollLock {
 }
 
 export const useScrollLock = (): IUseScrollLock => {
-  console.log("вытащили useScrollLock");
   const firstRender: React.MutableRefObject<boolean> = React.useRef(true);
   const scrollPosition: React.MutableRefObject<number> = React.useRef(0);
   const lockScroll = React.useCallback(() => {
