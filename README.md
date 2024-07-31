@@ -3,9 +3,8 @@
         overflow: hidden !important;
         height: 100svh !important;
     }
-    .start-scrolling {
-        overflow-y: scroll !important;
-        height: 100svh
+    .add-scroll-bar {
+        overflow-y: scroll;
     }
    
 3) Add file useScrollLock to your project files, for example in directory /hooks
