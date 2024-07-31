@@ -12,12 +12,14 @@ export const useScrollLock = (): IUseScrollLock => {
   const lockScroll = React.useCallback(() => {
     scrollPosition.current = window.scrollY;
     document.body.classList.add("stop-scrolling");
+    document.documentElement.classList.add("add-scroll-bar");
     document.body.scroll(0, scrollPosition.current);
   }, []);
 
   const unlockScroll = React.useCallback(() => {
     if (!firstRender.current) {
       document.body.classList.remove("stop-scrolling");
+      document.documentElement.classList.remove("add-scroll-bar");
       document.documentElement.scroll(0, scrollPosition.current);
     }
   }, []);
